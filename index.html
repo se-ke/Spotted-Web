@@ -163,9 +163,9 @@
 
         <div data-brackets-id='6577' id="map" style="position:absolute; width:97%; height:98%; background:grey; border-style: solid" ></div>
         <div data-brackets-id='6578' id="panel" style="position:absolute; width:20%; height:25%; background-color: rgba(0,0,0,.4); border-style: solid;" >
-            <img data-brackets-id='6579' src="graphics/redMarker.png" alt="red marker" style="position: absolute; top: 5%; left: 10%">
-            <img data-brackets-id='6580' src="graphics/blueMarker.png" alt="blue marker" style="position: absolute; top: 35%; left: 10%">
-            <img data-brackets-id='6581' src="graphics/drone.png" alt="small blue marker" style="position: absolute; top: 65%; left: 10%">
+            <img data-brackets-id='6579' src="graphics/redMarker.png" alt="red marker" style="position: absolute; top: 5%; left: 10%;width: 5vh">
+            <img data-brackets-id='6580' src="graphics/blueMarker.png" alt="blue marker" style="position: absolute; top: 35%; left: 10%; width: 5vh">
+            <img data-brackets-id='6581' src="graphics/drone.png" alt="small blue marker" style="position: absolute; top: 65%; left: 10%; width: 5vh">
             <p data-brackets-id='6582' style="position: absolute; top: 5%; left: 50%; color: white">Victim</p>
             <p data-brackets-id='6583' style="position: absolute; top: 35%; left: 50%; color: white">Volunteer</p>
             <p data-brackets-id='6584' style="position: absolute; top: 65%; left: 50%; color: white">Drone</p>
@@ -358,13 +358,13 @@
  * @param {Object} route  A route as received from the H.service.RoutingService
  */
             function addWaypointsToPanel(){
-                var icon = new H.map.icon("graphics/redMarkerSmall.png");
+                var icon = new H.map.Icon("https://github.com/Boogi56/Spotted-Web/blob/master/graphics/redMarkerSmall.png");      
                 var marker = new H.map.Marker({lat: 40.05872,lng: -75.26619}, {icon: icon});
                 map.addObject(marker);
 
-//                var icon2 = new H.map.icon("graphics/blueMarkerSmall.png");
-//                var marker2 = new H.map.Marker({lat: 39.9522,lng: -75.1911}, {icon: icon2});
-//                map.addObject(marker2);
+                var icon2 = new H.map.icon("https://github.com/Boogi56/Spotted-Web/blob/master/graphics/blueMarkerSmall.png");
+                var marker2 = new H.map.Marker({lat: 39.9522,lng: -75.1911}, {icon: icon2});
+                map.addObject(marker2);
             }
 
             /**
