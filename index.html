@@ -160,7 +160,6 @@
         </style>
     </head>
     <body data-brackets-id='6576'>
-
         <div data-brackets-id='6577' id="map" style="position:absolute; width:97%; height:98%; background:grey; border-style: solid" ></div>
         <div data-brackets-id='6578' id="panel" style="position:absolute; width:20%; height:25%; background-color: rgba(0,0,0,.4); border-style: solid;" >
             <img data-brackets-id='6579' src="graphics/redMarker.png" alt="red marker" style="position: absolute; top: 5%; left: 10%;width: 5vh">
@@ -172,15 +171,17 @@
         </div>
 
         <script data-brackets-id='6585'  type="text/javascript" charset="UTF-8" >
-
-
+            var lat1 = 39.9522;
+            var lon1 = -75.1911;
+            var lat2 = 40.05872;
+            var lon2 = -75.26619;
             /**
  * @param   {H.service.Platform} platform    A stub class to access HERE services
  */
             function calculateRouteFromAtoB (platform) {
                 var router = platform.getRoutingService(),
                     routeRequestParams = {
-                        mode: 'fastest;car',
+                        mode: 'fastest;pedestrian',
                         representation: 'display',
                         routeattributes : 'waypoints,summary,shape,legs',
                         maneuverattributes: 'direction,action',
