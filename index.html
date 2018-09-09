@@ -171,10 +171,8 @@
         </div>
 
         <script data-brackets-id='6585'  type="text/javascript" charset="UTF-8" >
-            var lat1 = 39.9522;
-            var lon1 = -75.1911;
-            var lat2 = 40.05872;
-            var lon2 = -75.26619;
+            var point1 = '39.9522,-75.1911';
+            var point2 = '40.05872,-75.26619';
             /**
  * @param   {H.service.Platform} platform    A stub class to access HERE services
  */
@@ -319,10 +317,7 @@
                     '<circle cx="8" cy="8" r="8" ' +
                     'fill="#1b468d" stroke="white" stroke-width="1"  />' +
                     '</svg>',
-                    dotIcon = new H.map.Icon(svgMarkup, {anchor: {x:8, y:8}}),
-                    group = new  H.map.Group(),
-                    i,
-                    j;
+                    dotIcon = new H.map.Icon(svgMarkup, {anchor: {x:8, y:8}}), group = new  H.map.Group(), i, j;
 
                 // Add a marker for each maneuver
                 for (i = 0;  i < route.leg.length; i += 1) {
@@ -354,12 +349,11 @@
  * @param {Object} route  A route as received from the H.service.RoutingService
  */
             function addWaypointsToPanel(){
-                var pngIcon = new H.map.Icon("graphics/blueMarkerSmall.png");      
-
+                var pngIcon = new H.map.Icon("graphics/blueMarker.png");
                 var marker = new H.map.Marker({lat: 40.05872,lng: -75.26619}, {icon: pngIcon});
                 map.addObject(marker);
 
-                var pngIcon2 = new H.map.Icon("graphics/redMarkerSmall.png");  
+                var pngIcon2 = new H.map.Icon("graphics/redMarker.png");  
                 var marker2 = new H.map.Marker({lat: 39.9522,lng: -75.1911}, {icon: pngIcon2});
                 map.addObject(marker2);
             }
@@ -387,9 +381,6 @@
  * @param {Object} route  A route as received from the H.service.RoutingService
  */
             function addManueversToPanel(route){
-
-
-
                 var nodeOL = document.createElement('ol'),
                     i,
                     j;
@@ -417,7 +408,6 @@
                         nodeOL.appendChild(li);
                     }
                 }
-
                 routeInstructionsContainer.appendChild(nodeOL);
             }
 
